@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">Mountain</string>
+
+    <!-- Not localized (proper noun) -->
+    <string name="home_title" translatable="false">Dong Open Air</string>
+
+    <string name="about_title">Über mich</string>
+    <string name="add_favorite">Favorit hinzufügen</string>
+    <string name="remove_favorite">Favorit entfernen</string>
+    <string name="appearance">Erscheinungsbild</string>
+    <string name="band">Band</string>
+    <string name="band_not_found">Band nicht gefunden</string>
+    <string name="open_source_intro">Beide Apps und die API, die die Daten liefert, sind Open Source.</string>
+    <string name="download_schedule_hint">Verbinde dich einmal mit dem Internet, um das Programm zu laden.</string>
+    <string name="appearance_dark">Dunkel</string>
+    <string name="appearance_light">Hell</string>
+    <string name="appearance_system">System</string>
+    <string name="favorites_only">Nur Favoriten</string>
+    <string name="find_me_online">Online findest du mich</string>
+    <string name="reminders_footer">Erhalte 15 Minuten vorher eine Erinnerung, bevor eine favorisierte Band spielt.</string>
+    <string name="bio_1">Moin, ich bin Thore! Podcaster und Softwareentwickler aus dem Ruhrgebiet. Das Dong Open Air liebe ich schon seit vielen Jahren, und diese App ist quasi mein kleiner Liebesbrief an das Festival.</string>
+    <string name="bio_2">Außerdem bin ich ein riesiger Magic: The Gathering Fan. Wenn wir uns auf dem Dong über den Weg laufen, lass uns gerne eine Runde spielen. Und wenn dir die App gefällt, freue ich mich riesig über ein Bier.</string>
+    <string name="lineup_title">Programm</string>
+    <string name="listen_and_follow">Anhören &amp; Folgen</string>
+    <string name="no_favorites">Keine Favoriten</string>
+    <string name="no_lineup_yet">Noch kein Programm</string>
+    <string name="no_upcoming_favorites">Keine anstehenden Auftritte deiner Favoriten.</string>
+    <string name="nothing_on_stage">Gerade spielt niemand.</string>
+    <string name="notifications">Benachrichtigungen</string>
+    <string name="now">Jetzt</string>
+    <string name="on_stage_at">Auf der Bühne um %1$s · %2$s</string>
+    <string name="open_source">Open Source</string>
+    <string name="about_subtitle">Podcaster &amp; Softwareentwickler aus dem Ruhrgebiet</string>
+    <string name="questions_or_bugs">Fragen oder Bug-Reports?</string>
+    <string name="reminders">Erinnerungen</string>
+    <string name="search_bands">Bands suchen</string>
+    <string name="settings">Einstellungen</string>
+    <string name="star_to_see_here">Markiere eine Band mit einem Stern, damit sie hier erscheint.</string>
+    <string name="tap_star_hint">Tippe auf den Stern einer Band, um ihr zu folgen. Du wirst erinnert, bevor sie spielt.</string>
+    <string name="up_next">Demnächst</string>
+    <string name="updated">Aktualisiert %1$s</string>
+    <string name="your_bands">Deine Bands</string>
+    <string name="dot_separator">%1$s · %2$s</string>
+
+    <!-- Information tab -->
+    <string name="info_title">Informationen</string>
+    <string name="official_links">Offizielle Links</string>
+    <string name="link_news">News</string>
+    <string name="link_faq">FAQ</string>
+    <string name="link_directions">Anfahrt</string>
+    <string name="disclaimer_title">Rechtlicher Hinweis</string>
+    <string name="disclaimer_body">Diese App ist ein inoffizielles Fan-Projekt und steht in keinerlei Verbindung zum DONG OPEN AIR oder zum Dong Kultur e.V. Sie wurde nicht vom Verein in Auftrag gegeben, autorisiert, geprüft oder anderweitig unterstützt.\n\nEs handelt sich um ein rein privates Projekt, das aus Begeisterung für das Festival entstanden ist. Mit der App werden keine kommerziellen Zwecke verfolgt und es besteht keinerlei Gewinnabsicht.\n\nAlle genannten Namen, Marken und Logos sind Eigentum ihrer jeweiligen Rechteinhaber. Sie werden hier ausschließlich zu informativen Zwecken verwendet. Für offizielle Informationen rund um das Festival besuche bitte die offiziellen Kanäle des DONG OPEN AIR bzw. des Dong Kultur e.V.\n\nAlle Angaben in dieser App erfolgen ohne Gewähr.</string>
+</resources>

@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">Mountain</string>
+
+    <string name="about_title">About</string>
+    <string name="add_favorite">Add favorite</string>
+    <string name="remove_favorite">Remove favorite</string>
+    <string name="appearance">Appearance</string>
+    <string name="band">Band</string>
+    <string name="band_not_found">Band not found</string>
+    <string name="open_source_intro">Both apps and the API that serves the data are open source.</string>
+    <string name="download_schedule_hint">Connect to the internet once to download the schedule.</string>
+    <string name="appearance_dark">Dark</string>
+    <string name="appearance_light">Light</string>
+    <string name="appearance_system">System</string>
+    <string name="favorites_only">Favorites only</string>
+    <string name="find_me_online">Find me online</string>
+    <string name="reminders_footer">Get a reminder 15 minutes before a favorited band plays.</string>
+    <string name="bio_1">Hey, I\'m Thore! A podcaster and software developer from the Ruhr area. I\'ve loved Dong Open Air for many years, and this app is basically my little love letter to the festival.</string>
+    <string name="bio_2">I\'m also a huge Magic: The Gathering fan. If we bump into each other at Dong, let\'s play a round. And if you enjoy the app, I\'d be happy if you grabbed me a beer.</string>
+    <string name="lineup_title">Line-up</string>
+    <string name="listen_and_follow">Listen &amp; Follow</string>
+    <string name="no_favorites">No favorites</string>
+    <string name="no_lineup_yet">No line-up yet</string>
+    <string name="no_upcoming_favorites">No upcoming sets for your favorites.</string>
+    <string name="nothing_on_stage">Nothing on stage right now.</string>
+    <string name="notifications">Notifications</string>
+    <string name="now">Now</string>
+    <string name="on_stage_at">On stage at %1$s · %2$s</string>
+    <string name="open_source">Open Source</string>
+    <string name="about_subtitle">Podcaster &amp; software developer from the Ruhr area</string>
+    <string name="questions_or_bugs">Questions or bug reports?</string>
+    <string name="reminders">Reminders</string>
+    <string name="search_bands">Search bands</string>
+    <string name="settings">Settings</string>
+    <string name="star_to_see_here">Star a band to see it here.</string>
+    <string name="tap_star_hint">Tap the star on a band to follow it. You\'ll get a reminder before they play.</string>
+    <string name="up_next">Up next</string>
+    <string name="updated">Updated %1$s</string>
+    <string name="your_bands">Your bands</string>
+    <string name="dot_separator">%1$s · %2$s</string>
+
+    <!-- Information tab -->
+    <string name="info_title">Information</string>
+    <string name="official_links">Official links</string>
+    <string name="link_news">News</string>
+    <string name="link_faq">FAQ</string>
+    <string name="link_directions">Directions</string>
+    <string name="disclaimer_title">Legal notice</string>
+    <string name="disclaimer_body">This app is an unofficial fan project and is in no way affiliated with DONG OPEN AIR or Dong Kultur e.V. It was not commissioned, authorized, reviewed, or otherwise endorsed by the association.\n\nIt is a purely private project created out of enthusiasm for the festival. The app pursues no commercial purposes and has no intention of making a profit.\n\nAll names, trademarks, and logos mentioned are the property of their respective rights holders. They are used here for informational purposes only. For official information about the festival, please visit the official channels of DONG OPEN AIR or Dong Kultur e.V.\n\nAll information in this app is provided without guarantee.</string>
+</resources>

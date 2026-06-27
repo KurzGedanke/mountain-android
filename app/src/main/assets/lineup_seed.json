@@ -1,0 +1,599 @@
+{
+  "festival": "Dong Open Air 2026",
+  "stages": [
+    "Hauptbühne"
+  ],
+  "bands": [
+    {
+      "id": 1,
+      "name": "Aereum",
+      "slug": "aereum",
+      "genre": "Melodic Death / Folk Metal",
+      "logo": "https://bands.baphomet.club/images/band/logos/",
+      "image": "https://bands.baphomet.club/images/band/images/aereum.jpg",
+      "instagram": "https://www.instagram.com/aereumofficial/",
+      "spotify": "https://open.spotify.com/artist/4InllsE71WEGbU1sM1nUtN",
+      "appleMusic": "https://music.apple.com/us/artist/aereum/1492839659",
+      "bandcamp": "https://aereum.bandcamp.com/",
+      "description": "Melodic death and folk metal band from Duisburg, Germany, whose lyrics weave the mysticism of ancient Egypt with earthy themes. Debut album \"Tempest of Time\" (2020)."
+    },
+    {
+      "id": 2,
+      "name": "Onyxsin",
+      "slug": "onyxsin",
+      "genre": "Alternative Metal / Metalcore",
+      "logo": "https://bands.baphomet.club/images/band/logos/",
+      "image": "https://bands.baphomet.club/images/band/images/onyxsin.jpg",
+      "instagram": "https://www.instagram.com/onyxsin_official/",
+      "spotify": "https://open.spotify.com/artist/6JKpO4OLTJAkwdwa8yt2UF",
+      "appleMusic": "https://music.apple.com/de/artist/onyxsin/1711274642",
+      "bandcamp": null,
+      "description": "Metal trio from Duisburg, Germany, formed in late 2021, blending metalcore and hard rock with prog and melodic death metal under the motto \"both hard and melodic\"."
+    },
+    {
+      "id": 3,
+      "name": "Opus Maxima",
+      "slug": "opus-maxima",
+      "genre": "Djent / Progressive Deathcore",
+      "logo": "https://bands.baphomet.club/images/band/logos/",
+      "image": "https://bands.baphomet.club/images/band/images/opus_maxima.jpg",
+      "instagram": "https://www.instagram.com/opusmaximaofficial/",
+      "spotify": "https://open.spotify.com/artist/20XGECH8f1iYiduEfH9w7r",
+      "appleMusic": "https://music.apple.com/us/artist/opus-maxima/1336067467",
+      "bandcamp": "https://opusmaximaofficial.bandcamp.com/",
+      "description": "Djent and progressive deathcore band from Mexico City, Mexico, known for 8-string riffs and heavy breakdowns. Album \"El Renacer\" (2021)."
+    },
+    {
+      "id": 4,
+      "name": "Homecoming",
+      "slug": "homecoming",
+      "genre": "Post-Metal / Progressive Metal",
+      "logo": "https://bands.baphomet.club/images/band/logos/",
+      "image": "https://bands.baphomet.club/images/band/images/homecoming.jpg",
+      "instagram": "https://www.instagram.com/homecoming_paris/",
+      "spotify": "https://open.spotify.com/artist/5qad2jhw9rXk2MlKO1khL1",
+      "appleMusic": null,
+      "bandcamp": "https://wearehomecoming.bandcamp.com/",
+      "description": "Post-metal and progressive metal quartet from Paris, France, fusing sludge, grunge, 90s alternative rock and prog. Albums \"LP01\" (2019) and \"Those We Knew\" (2024)."
+    },
+    {
+      "id": 5,
+      "name": "Octoploid",
+      "slug": "octoploid",
+      "genre": "Melodic Death / Progressive Metal",
+      "logo": "https://bands.baphomet.club/images/band/logos/",
+      "image": "https://bands.baphomet.club/images/band/images/octoploid.jpg",
+      "instagram": "https://www.instagram.com/octoploidmusic/",
+      "spotify": "https://open.spotify.com/artist/712moi8jSAse1lYXB6rU4R",
+      "appleMusic": "https://music.apple.com/ca/artist/octoploid/1736843645",
+      "bandcamp": null,
+      "description": "Solo project of Amorphis founding bassist Olli-Pekka Laine (Finland), blending 90s death/black metal with 70s prog. Debut album \"Beyond the Aeons\" (2024)."
+    },
+    {
+      "id": 6,
+      "name": "Non Est Deus",
+      "slug": "non-est-deus",
+      "genre": "Melodic Black Metal",
+      "logo": "https://bands.baphomet.club/images/band/logos/",
+      "image": "https://bands.baphomet.club/images/band/images/non_est_deux.jpg",
+      "instagram": "https://www.instagram.com/non_est_deus/",
+      "spotify": "https://open.spotify.com/artist/3CAMaX2bss4c0E7K4O0dTf",
+      "appleMusic": "https://music.apple.com/us/artist/non-est-deus/1598304436",
+      "bandcamp": "https://noisebringer-records.bandcamp.com/",
+      "description": "Melodic black metal project from Bamberg, Germany, formed in 2017 by the anonymous musician \"Noise\" (also of Kanonenfieber), themed around the rejection of religious fanaticism."
+    },
+    {
+      "id": 7,
+      "name": "Subway to Sally",
+      "slug": "subway-to-sally",
+      "genre": "Medieval Folk Metal",
+      "logo": "https://bands.baphomet.club/images/band/logos/",
+      "image": "https://bands.baphomet.club/images/band/images/subway_to_sally.jpg",
+      "instagram": "https://www.instagram.com/subwaytosallyofficial/",
+      "spotify": "https://open.spotify.com/artist/544X9aDcwFDSon8HevRcqg",
+      "appleMusic": "https://music.apple.com/us/artist/subway-to-sally/13498062",
+      "bandcamp": "https://subwaytosally.bandcamp.com/",
+      "description": "German medieval/folk metal band formed in Potsdam in 1990, blending metal with bagpipes, hurdy-gurdy, shawm and violin, mostly singing in German."
+    },
+    {
+      "id": 8,
+      "name": "Amorphis",
+      "slug": "amorphis",
+      "genre": "Melodic Death / Heavy Metal",
+      "logo": "https://bands.baphomet.club/images/band/logos/",
+      "image": "https://bands.baphomet.club/images/band/images/amorphis.jpg",
+      "instagram": "https://www.instagram.com/amorphisband/",
+      "spotify": "https://open.spotify.com/artist/2UOVgpgiNTC6KK0vSC77aD",
+      "appleMusic": "https://music.apple.com/fi/artist/amorphis/5545051",
+      "bandcamp": null,
+      "description": "Metal band from Helsinki, Finland, formed in 1990, blending melodic death and heavy metal with progressive and folk elements and lyrics drawn from the Kalevala."
+    },
+    {
+      "id": 9,
+      "name": "Hold Your Ground",
+      "slug": "hold-your-ground",
+      "genre": "Hardcore Punk",
+      "logo": "https://bands.baphomet.club/images/band/logos/",
+      "image": "https://bands.baphomet.club/images/band/images/hold_your_ground.jpg",
+      "instagram": "https://www.instagram.com/holdyourground_official/",
+      "spotify": "https://open.spotify.com/artist/5yhHa68oOzZLNIS9i8NAaT",
+      "appleMusic": null,
+      "bandcamp": "https://holdyourground1.bandcamp.com/",
+      "description": "Four-piece hardcore-punk band from Lünen, Germany, formed in 2021, playing short, direct, energetic songs."
+    },
+    {
+      "id": 10,
+      "name": "VORGA",
+      "slug": "vorga",
+      "genre": "Atmospheric Black Metal",
+      "logo": "https://bands.baphomet.club/images/band/logos/",
+      "image": "https://bands.baphomet.club/images/band/images/vorga.jpg",
+      "instagram": "https://www.instagram.com/vorga_band/",
+      "spotify": "https://open.spotify.com/artist/4VeQnaE38lgZIDrYPUYOA8",
+      "appleMusic": "https://music.apple.com/us/artist/vorga/1454170253",
+      "bandcamp": "https://vorga.bandcamp.com/",
+      "description": "Sci-fi-themed melodic/atmospheric black metal band founded in 2016, based in Karlsruhe, Germany. Album \"Beyond the Palest Star\" (2024) via Transcending Obscurity."
+    },
+    {
+      "id": 11,
+      "name": "Vansind",
+      "slug": "vansind",
+      "genre": "Folk Metal",
+      "logo": "https://bands.baphomet.club/images/band/logos/",
+      "image": "https://bands.baphomet.club/images/band/images/vansind.jpg",
+      "instagram": "https://www.instagram.com/vansindband/",
+      "spotify": "https://open.spotify.com/artist/0Nykhf9j9EMdq4K8LeaDfe",
+      "appleMusic": "https://music.apple.com/us/artist/vansind/1501668341",
+      "bandcamp": "https://vansind.bandcamp.com/",
+      "description": "Folk metal band formed in 2019 in Slagelse, Denmark, blending Viking/folk metal with lyrics drawn from Norse mythology and Scandinavian history."
+    },
+    {
+      "id": 12,
+      "name": "SubMasq",
+      "slug": "submasq",
+      "genre": "Progressive Oriental Metal",
+      "logo": "https://bands.baphomet.club/images/band/logos/",
+      "image": "https://bands.baphomet.club/images/band/images/subterranean_masquerade.jpg",
+      "instagram": "https://www.instagram.com/subterranean_masquerade/",
+      "spotify": "https://open.spotify.com/artist/06JYsafBUf9AGI0SUd4tY2",
+      "appleMusic": "https://music.apple.com/us/artist/subterranean-masquerade/79486100",
+      "bandcamp": "https://submasq.bandcamp.com/",
+      "description": "Subterranean Masquerade (SubMasq) is a progressive oriental/psychedelic metal band from Israel, founded in 1997, blending avant-garde metal with Middle Eastern influences."
+    },
+    {
+      "id": 13,
+      "name": "Night in Gales",
+      "slug": "night-in-gales",
+      "genre": "Melodic Death Metal",
+      "logo": "https://bands.baphomet.club/images/band/logos/",
+      "image": "https://bands.baphomet.club/images/band/images/night_in_gales.jpg",
+      "instagram": "https://www.instagram.com/night_in_gales_deathmetal/",
+      "spotify": "https://open.spotify.com/artist/16l3GG2iL03FXfxJaNx1rC",
+      "appleMusic": null,
+      "bandcamp": "https://nightingalesmerch.bandcamp.com/",
+      "description": "German melodic death metal band from North Rhine-Westphalia, active since 1995. Ninth album \"Shadowreaper\" (2024)."
+    },
+    {
+      "id": 14,
+      "name": "Goldsmith",
+      "slug": "goldsmith",
+      "genre": "Heavy Rock",
+      "logo": "https://bands.baphomet.club/images/band/logos/",
+      "image": "https://bands.baphomet.club/images/band/images/goldsmith.jpg",
+      "instagram": "https://www.instagram.com/goldsmithrocks/",
+      "spotify": "https://open.spotify.com/artist/3cMgrUPLwJg5aky4Z4sszv",
+      "appleMusic": null,
+      "bandcamp": null,
+      "description": "Heavy rock band from Freiburg, Germany, founded by guitarist/vocalist Michael Goldschmidt, blending traditional heavy metal, thrash, hard rock and punk."
+    },
+    {
+      "id": 15,
+      "name": "Grailknights",
+      "slug": "grailknights",
+      "genre": "Power Metal",
+      "logo": "https://bands.baphomet.club/images/band/logos/",
+      "image": "https://bands.baphomet.club/images/band/images/grailknights.jpg",
+      "instagram": "https://www.instagram.com/grailknights_official/",
+      "spotify": "https://open.spotify.com/artist/3WKWdx78zcqsj2RkN5ldqR",
+      "appleMusic": null,
+      "bandcamp": null,
+      "description": "German power metal band from Wunstorf known for theatrical superhero personas and fantasy-themed lyrics. Album \"Forever\" (2025)."
+    },
+    {
+      "id": 16,
+      "name": "Creeper",
+      "slug": "creeper",
+      "genre": "Horror Punk / Gothic Rock",
+      "logo": "https://bands.baphomet.club/images/band/logos/",
+      "image": "https://bands.baphomet.club/images/band/images/creeper.jpg",
+      "instagram": "https://www.instagram.com/creepercult/",
+      "spotify": "https://open.spotify.com/artist/0nV7SiEIVtPLTSJ6NwWDGj",
+      "appleMusic": null,
+      "bandcamp": null,
+      "description": "British band from Southampton, England, formed in 2014, whose concept albums span horror punk, glam rock and gothic rock; fronted by Will Gould."
+    },
+    {
+      "id": 17,
+      "name": "Satyricon",
+      "slug": "satyricon",
+      "genre": "Black Metal",
+      "logo": "https://bands.baphomet.club/images/band/logos/",
+      "image": "https://bands.baphomet.club/images/band/images/satyricon.jpg",
+      "instagram": "https://www.instagram.com/satyriconofficial/",
+      "spotify": "https://open.spotify.com/artist/221Rd0FvVxMx7eCbWqjiKd",
+      "appleMusic": null,
+      "bandcamp": "https://satyricon.bandcamp.com/",
+      "description": "Norwegian black metal band formed in Oslo in 1991, led by Satyr and Frost; one of the most prominent acts in Norwegian black metal."
+    },
+    {
+      "id": 18,
+      "name": "Skindred",
+      "slug": "skindred",
+      "genre": "Ragga Metal",
+      "logo": "https://bands.baphomet.club/images/band/logos/",
+      "image": "https://bands.baphomet.club/images/band/images/skindred.jpg",
+      "instagram": "https://www.instagram.com/skindredmusic/",
+      "spotify": "https://open.spotify.com/artist/3jTlKw98Ql1jGRPYqhqHap",
+      "appleMusic": null,
+      "bandcamp": null,
+      "description": "Welsh band from Newport formed in 1998 fusing heavy metal with reggae, a style they call ragga metal. 2026 album \"You Got This\" topped the UK Albums Chart."
+    },
+    {
+      "id": 19,
+      "name": "Goatfather",
+      "slug": "goatfather",
+      "genre": "Stoner Rock",
+      "logo": "https://bands.baphomet.club/images/band/logos/",
+      "image": "https://bands.baphomet.club/images/band/images/goatfather.jpg",
+      "instagram": "https://www.instagram.com/goatfather_stoner/",
+      "spotify": "https://open.spotify.com/artist/6ZSawiJyYTvdaCzQ25QwyM",
+      "appleMusic": "https://music.apple.com/us/artist/goatfather/1160685342",
+      "bandcamp": "https://goatfather.bandcamp.com/",
+      "description": "Stoner/Southern rock quartet formed in 2014 in Lyon, France. Third album \"House of the Rising Smoke\" (2025) via Argonauta Records."
+    },
+    {
+      "id": 20,
+      "name": "Snakebite",
+      "slug": "snakebite",
+      "genre": "Hard Rock / Heavy Metal",
+      "logo": "https://bands.baphomet.club/images/band/logos/",
+      "image": "https://bands.baphomet.club/images/band/images/snakebite.jpg",
+      "instagram": "https://www.instagram.com/snakebite_music/",
+      "spotify": "https://open.spotify.com/artist/50WEDFpbZjnsOda59ai38R",
+      "appleMusic": "https://music.apple.com/us/artist/snakebite/3992097",
+      "bandcamp": "https://snakebite-music.bandcamp.com/",
+      "description": "Hard rock/heavy metal band from Essen, Germany, drawing on 80s rock and metal influences. Album \"Cobra Crew\" (2024)."
+    },
+    {
+      "id": 21,
+      "name": "Gangrena Gasosa",
+      "slug": "gangrena-gasosa",
+      "genre": "Saravá Metal / Crossover Thrash",
+      "logo": "https://bands.baphomet.club/images/band/logos/",
+      "image": "https://bands.baphomet.club/images/band/images/gangrena_gasosa.jpg",
+      "instagram": "https://www.instagram.com/gangrenagasosa/",
+      "spotify": "https://open.spotify.com/artist/7bmlMF1tQCEqpaW0apBGEh",
+      "appleMusic": "https://music.apple.com/us/artist/gangrena-gasosa/1018527747",
+      "bandcamp": null,
+      "description": "Brazilian band from Rio de Janeiro that pioneered \"saravá metal\", a humorous fusion of crossover thrash, hardcore and Afro-Brazilian (Umbanda) elements. Album \"Figa Of The Dark\" (2024)."
+    },
+    {
+      "id": 22,
+      "name": "Synsnake",
+      "slug": "synsnake",
+      "genre": "Metalcore",
+      "logo": "https://bands.baphomet.club/images/band/logos/",
+      "image": "https://bands.baphomet.club/images/band/images/sysnake.jpg",
+      "instagram": "https://www.instagram.com/synsnakeofficial/",
+      "spotify": "https://open.spotify.com/artist/77gfMqeW2CqUi95Fwi1onA",
+      "appleMusic": "https://music.apple.com/us/artist/synsnake/1121539493",
+      "bandcamp": "https://synsnake.bandcamp.com/",
+      "description": "South Korean metalcore band from Seoul, formed in 2015, known for coining \"K-popcore\". Second album \"Nodes\" (2025)."
+    },
+    {
+      "id": 23,
+      "name": "Impureza",
+      "slug": "impureza",
+      "genre": "Death Metal (Hispanic Metal)",
+      "logo": "https://bands.baphomet.club/images/band/logos/",
+      "image": "https://bands.baphomet.club/images/band/images/impureza.jpg",
+      "instagram": "https://www.instagram.com/impurezaofficial/",
+      "spotify": "https://open.spotify.com/artist/3YA9Uqs38ZD6Lg2q66PVw9",
+      "appleMusic": "https://music.apple.com/us/artist/impureza/422671948",
+      "bandcamp": "https://impureza.bandcamp.com/",
+      "description": "Franco-Spanish band formed in 2004 fusing brutal death metal with flamenco guitar and Spanish vocals — \"Hispanic Metal\". Album \"Alcázares\" (2025) via Season of Mist."
+    },
+    {
+      "id": 24,
+      "name": "Detartrated",
+      "slug": "detartrated",
+      "genre": "Deathcore",
+      "logo": "https://bands.baphomet.club/images/band/logos/",
+      "image": "https://bands.baphomet.club/images/band/images/detartrated.jpg",
+      "instagram": "https://www.instagram.com/detartrated_official/",
+      "spotify": "https://open.spotify.com/artist/03V1hykDrJWlq0kzEQkNBe",
+      "appleMusic": "https://music.apple.com/de/artist/detartrated/1804598727",
+      "bandcamp": "https://detartrated.bandcamp.com/",
+      "description": "German orchestral deathcore band from the Castrop-Rauxel area, formed in 2024, combining crushing breakdowns with orchestral atmospheres."
+    },
+    {
+      "id": 25,
+      "name": "Bonded",
+      "slug": "bonded",
+      "genre": "Thrash Metal",
+      "logo": "https://bands.baphomet.club/images/band/logos/",
+      "image": "https://bands.baphomet.club/images/band/images/bonded.jpg",
+      "instagram": "https://www.instagram.com/bondedofficial/",
+      "spotify": "https://open.spotify.com/artist/7IqK0RqRcaTDtVJtblZ0HQ",
+      "appleMusic": "https://music.apple.com/us/artist/bonded/1487156987",
+      "bandcamp": "https://bonded.bandcamp.com/",
+      "description": "German thrash/death metal band formed in 2018, featuring former Sodom members Bernemann and Makka Freiwald. Debut \"Rest In Violence\" (2020) via Century Media."
+    },
+    {
+      "id": 26,
+      "name": "Gaerea",
+      "slug": "gaerea",
+      "genre": "Black Metal",
+      "logo": "https://bands.baphomet.club/images/band/logos/",
+      "image": "https://bands.baphomet.club/images/band/images/gaerea.jpg",
+      "instagram": "https://www.instagram.com/gaerea_/",
+      "spotify": "https://open.spotify.com/artist/1wXoI3Ajpv4WwQ3LmcrSBw",
+      "appleMusic": "https://music.apple.com/us/artist/gaerea/1383640506",
+      "bandcamp": "https://gaerea.bandcamp.com/",
+      "description": "Masked black metal band from Porto, Portugal, formed in 2016 and signed to Season of Mist, known for anonymity and an emotive, genre-bending sound."
+    },
+    {
+      "id": 27,
+      "name": "Overkill",
+      "slug": "overkill",
+      "genre": "Thrash Metal",
+      "logo": "https://bands.baphomet.club/images/band/logos/",
+      "image": "https://bands.baphomet.club/images/band/images/overkill.jpg",
+      "instagram": "https://www.instagram.com/overkillofficial/",
+      "spotify": "https://open.spotify.com/artist/0NmYchKQ8JIR9QHYJA0FRe",
+      "appleMusic": "https://music.apple.com/us/artist/overkill/263455457",
+      "bandcamp": "https://overkillmetal.bandcamp.com/",
+      "description": "American thrash metal band formed in 1980 in New Jersey, fronted by Bobby \"Blitz\" Ellsworth and bassist D.D. Verni. One of the pioneering East Coast thrash bands."
+    },
+    {
+      "id": 28,
+      "name": "Alestorm",
+      "slug": "alestorm",
+      "genre": "Pirate Metal",
+      "logo": "https://bands.baphomet.club/images/band/logos/",
+      "image": "https://bands.baphomet.club/images/band/images/alestorm.jpg",
+      "instagram": "https://www.instagram.com/alestormofficial/",
+      "spotify": "https://open.spotify.com/artist/3OpqU68JpZlzvjAJj3B2Da",
+      "appleMusic": "https://music.apple.com/us/artist/alestorm/272280214",
+      "bandcamp": "https://alestorm.bandcamp.com/",
+      "description": "Scottish heavy metal band formed in Perth in 2004, dubbed \"pirate metal\" for its pirate-themed folk and power metal sound. Signed to Napalm Records."
+    }
+  ],
+  "slots": [
+    {
+      "bandId": 1,
+      "band": "Aereum",
+      "bandSlug": "aereum",
+      "stage": "Hauptbühne",
+      "start": 1784197500,
+      "end": 1784201400
+    },
+    {
+      "bandId": 2,
+      "band": "Onyxsin",
+      "bandSlug": "onyxsin",
+      "stage": "Hauptbühne",
+      "start": 1784201400,
+      "end": 1784205300
+    },
+    {
+      "bandId": 3,
+      "band": "Opus Maxima",
+      "bandSlug": "opus-maxima",
+      "stage": "Hauptbühne",
+      "start": 1784205300,
+      "end": 1784209200
+    },
+    {
+      "bandId": 4,
+      "band": "Homecoming",
+      "bandSlug": "homecoming",
+      "stage": "Hauptbühne",
+      "start": 1784209200,
+      "end": 1784213100
+    },
+    {
+      "bandId": 5,
+      "band": "Octoploid",
+      "bandSlug": "octoploid",
+      "stage": "Hauptbühne",
+      "start": 1784213100,
+      "end": 1784217000
+    },
+    {
+      "bandId": 6,
+      "band": "Non Est Deus",
+      "bandSlug": "non-est-deus",
+      "stage": "Hauptbühne",
+      "start": 1784217000,
+      "end": 1784222400
+    },
+    {
+      "bandId": 7,
+      "band": "Subway to Sally",
+      "bandSlug": "subway-to-sally",
+      "stage": "Hauptbühne",
+      "start": 1784222400,
+      "end": 1784228400
+    },
+    {
+      "bandId": 8,
+      "band": "Amorphis",
+      "bandSlug": "amorphis",
+      "stage": "Hauptbühne",
+      "start": 1784228400,
+      "end": 1784232900
+    },
+    {
+      "bandId": 9,
+      "band": "Hold Your Ground",
+      "bandSlug": "hold-your-ground",
+      "stage": "Hauptbühne",
+      "start": 1784279700,
+      "end": 1784283600
+    },
+    {
+      "bandId": 10,
+      "band": "VORGA",
+      "bandSlug": "vorga",
+      "stage": "Hauptbühne",
+      "start": 1784283600,
+      "end": 1784287500
+    },
+    {
+      "bandId": 11,
+      "band": "Vansind",
+      "bandSlug": "vansind",
+      "stage": "Hauptbühne",
+      "start": 1784287500,
+      "end": 1784291400
+    },
+    {
+      "bandId": 12,
+      "band": "SubMasq",
+      "bandSlug": "submasq",
+      "stage": "Hauptbühne",
+      "start": 1784291400,
+      "end": 1784295300
+    },
+    {
+      "bandId": 13,
+      "band": "Night in Gales",
+      "bandSlug": "night-in-gales",
+      "stage": "Hauptbühne",
+      "start": 1784295300,
+      "end": 1784299200
+    },
+    {
+      "bandId": 14,
+      "band": "Goldsmith",
+      "bandSlug": "goldsmith",
+      "stage": "Hauptbühne",
+      "start": 1784299200,
+      "end": 1784303100
+    },
+    {
+      "bandId": 15,
+      "band": "Grailknights",
+      "bandSlug": "grailknights",
+      "stage": "Hauptbühne",
+      "start": 1784303100,
+      "end": 1784307900
+    },
+    {
+      "bandId": 16,
+      "band": "Creeper",
+      "bandSlug": "creeper",
+      "stage": "Hauptbühne",
+      "start": 1784307900,
+      "end": 1784313300
+    },
+    {
+      "bandId": 17,
+      "band": "Satyricon",
+      "bandSlug": "satyricon",
+      "stage": "Hauptbühne",
+      "start": 1784313300,
+      "end": 1784319300
+    },
+    {
+      "bandId": 18,
+      "band": "Skindred",
+      "bandSlug": "skindred",
+      "stage": "Hauptbühne",
+      "start": 1784319300,
+      "end": 1784323800
+    },
+    {
+      "bandId": 19,
+      "band": "Goatfather",
+      "bandSlug": "goatfather",
+      "stage": "Hauptbühne",
+      "start": 1784366100,
+      "end": 1784370000
+    },
+    {
+      "bandId": 20,
+      "band": "Snakebite",
+      "bandSlug": "snakebite",
+      "stage": "Hauptbühne",
+      "start": 1784370000,
+      "end": 1784373900
+    },
+    {
+      "bandId": 21,
+      "band": "Gangrena Gasosa",
+      "bandSlug": "gangrena-gasosa",
+      "stage": "Hauptbühne",
+      "start": 1784373900,
+      "end": 1784377800
+    },
+    {
+      "bandId": 22,
+      "band": "Synsnake",
+      "bandSlug": "synsnake",
+      "stage": "Hauptbühne",
+      "start": 1784377800,
+      "end": 1784381700
+    },
+    {
+      "bandId": 23,
+      "band": "Impureza",
+      "bandSlug": "impureza",
+      "stage": "Hauptbühne",
+      "start": 1784381700,
+      "end": 1784385600
+    },
+    {
+      "bandId": 24,
+      "band": "Detartrated",
+      "bandSlug": "detartrated",
+      "stage": "Hauptbühne",
+      "start": 1784385600,
+      "end": 1784389500
+    },
+    {
+      "bandId": 25,
+      "band": "Bonded",
+      "bandSlug": "bonded",
+      "stage": "Hauptbühne",
+      "start": 1784389500,
+      "end": 1784394300
+    },
+    {
+      "bandId": 26,
+      "band": "Gaerea",
+      "bandSlug": "gaerea",
+      "stage": "Hauptbühne",
+      "start": 1784394300,
+      "end": 1784399700
+    },
+    {
+      "bandId": 27,
+      "band": "Overkill",
+      "bandSlug": "overkill",
+      "stage": "Hauptbühne",
+      "start": 1784399700,
+      "end": 1784405700
+    },
+    {
+      "bandId": 28,
+      "band": "Alestorm",
+      "bandSlug": "alestorm",
+      "stage": "Hauptbühne",
+      "start": 1784405700,
+      "end": 1784410200
+    }
+  ],
+  "updatedAt": null
+}
