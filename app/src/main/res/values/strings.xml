@@ -48,6 +48,9 @@
     <string name="link_news">News</string>
     <string name="link_faq">FAQ</string>
     <string name="link_directions">Anfahrt</string>
+    <string name="get_app">Android-App</string>
+    <string name="link_source">Quellcode</string>
+    <string name="link_releases">App herunterladen</string>
     <string name="disclaimer_title">Rechtlicher Hinweis</string>
     <string name="disclaimer_body">Diese App ist ein inoffizielles Fan-Projekt und steht in keinerlei Verbindung zum DONG OPEN AIR oder zum Dong Kultur e.V. Sie wurde nicht vom Verein in Auftrag gegeben, autorisiert, geprüft oder anderweitig unterstützt.\n\nEs handelt sich um ein rein privates Projekt, das aus Begeisterung für das Festival entstanden ist. Mit der App werden keine kommerziellen Zwecke verfolgt und es besteht keinerlei Gewinnabsicht.\n\nAlle genannten Namen, Marken und Logos sind Eigentum ihrer jeweiligen Rechteinhaber. Sie werden hier ausschließlich zu informativen Zwecken verwendet. Für offizielle Informationen rund um das Festival besuche bitte die offiziellen Kanäle des DONG OPEN AIR bzw. des Dong Kultur e.V.\n\nAlle Angaben in dieser App erfolgen ohne Gewähr.</string>
 </resources>

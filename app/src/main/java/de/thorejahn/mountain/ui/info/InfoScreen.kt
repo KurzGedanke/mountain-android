@@ -10,7 +10,9 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.HelpOutline
 import androidx.compose.material.icons.filled.AccountCircle
+import androidx.compose.material.icons.filled.Code
 import androidx.compose.material.icons.filled.Directions
+import androidx.compose.material.icons.filled.Download
 import androidx.compose.material.icons.filled.Newspaper
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -60,6 +62,17 @@ fun InfoScreen(modifier: Modifier = Modifier) {
                 }
                 LinkRow(Icons.Filled.Directions, Color(0xFF388E3C), stringResource(R.string.link_directions), "dongopenair.de/anfahrt") {
                     openUrl("https://www.dongopenair.de/anfahrt/")
+                }
+            }
+
+            // Where to get the Android app
+            Column(verticalArrangement = Arrangement.spacedBy(12.dp), modifier = Modifier.fillMaxWidth()) {
+                SectionHeader(stringResource(R.string.get_app))
+                LinkRow(Icons.Filled.Download, Color(0xFF388E3C), stringResource(R.string.link_releases), "github.com/KurzGedanke/mountain-android/releases") {
+                    openUrl("https://github.com/KurzGedanke/mountain-android/releases")
+                }
+                LinkRow(Icons.Filled.Code, Color(0xFF424242), stringResource(R.string.link_source), "github.com/KurzGedanke/mountain-android") {
+                    openUrl("https://github.com/KurzGedanke/mountain-android")
                 }
             }
 
