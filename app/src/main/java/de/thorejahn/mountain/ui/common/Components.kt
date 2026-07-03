@@ -39,11 +39,13 @@ import androidx.compose.ui.unit.dp
 import coil3.compose.SubcomposeAsyncImage
 import coil3.compose.SubcomposeAsyncImageContent
 import de.thorejahn.mountain.R
+import de.thorejahn.mountain.data.model.AutographSession
 import de.thorejahn.mountain.data.model.Band
 import de.thorejahn.mountain.data.model.TimeSlot
 import de.thorejahn.mountain.data.model.imageUrl
 import de.thorejahn.mountain.domain.LineupStore
 import de.thorejahn.mountain.ui.Destination
+import de.thorejahn.mountain.ui.LocalAutographFavoritesStore
 import de.thorejahn.mountain.ui.LocalFavoritesStore
 import de.thorejahn.mountain.ui.LocalLineupStore
 import de.thorejahn.mountain.ui.LocalNav
@@ -116,6 +118,78 @@ fun FavoriteButton(bandId: Int, modifier: Modifier = Modifier, iconSize: Dp = 24
     }
 }
 
+/** Star/reminder toggle for a single autograph session (§6) — where favoriting a session happens. */
+@Composable
+fun AutographReminderButton(sessionId: String, modifier: Modifier = Modifier, iconSize: Dp = 24.dp) {
+    val favorites = LocalAutographFavoritesStore.current
+    val isFav = favorites.isFavorite(sessionId)
+    IconButton(onClick = { favorites.toggle(sessionId) }, modifier = modifier) {
+        Icon(
+            imageVector = if (isFav) Icons.Filled.Star else Icons.Outlined.StarBorder,
+            contentDescription = stringResource(
+                if (isFav) R.string.remind_remove else R.string.remind_add
+            ),
+            tint = if (isFav) Color(0xFFFFC400) else MaterialTheme.colorScheme.onSurfaceVariant,
+            modifier = Modifier.size(iconSize),
+        )
+    }
+}
+
+/**
+ * Non-interactive favorite indicator (§7). On the Home screen a stray tap must never remove a
+ * favorite, so the star is a static glyph, not a toggle. Occupies the same footprint as
+ * [FavoriteButton] so rows stay aligned.
+ */
+@Composable
+fun StaticFavoriteStar(
+    isFavorite: Boolean = true,
+    modifier: Modifier = Modifier,
+    iconSize: Dp = 24.dp,
+) {
+    Box(modifier = modifier.size(48.dp), contentAlignment = Alignment.Center) {
+        Icon(
+            imageVector = if (isFavorite) Icons.Filled.Star else Icons.Outlined.StarBorder,
+            contentDescription = if (isFavorite) stringResource(R.string.favorited) else null,
+            tint = if (isFavorite) Color(0xFFFFC400) else MaterialTheme.colorScheme.onSurfaceVariant,
+            modifier = Modifier.size(iconSize),
+        )
+    }
+}
+
+/** Home "Your next autograph session" row (§7): thumbnail, name, when · point, static star. */
+@Composable
+fun AutographHomeRow(session: AutographSession, modifier: Modifier = Modifier) {
+    val lineup = LocalLineupStore.current
+    val nav = LocalNav.current
+    val band = lineup.band(session.bandId)
+    Row(
+        modifier = modifier
+            .fillMaxWidth()
+            .clickable { nav.push(Destination.BandDetail(session.bandId)) }
+            .padding(vertical = 8.dp),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(12.dp),
+    ) {
+        BandThumbnail(band)
+        Column(modifier = Modifier.weight(1f)) {
+            Text(
+                text = session.band,
+                style = MaterialTheme.typography.bodyLarge,
+            )
+            Text(
+                text = stringResource(
+                    R.string.dot_separator,
+                    Fmt.dayTime(session.start),
+                    session.signingPoint,
+                ),
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+        }
+        StaticFavoriteStar()
+    }
+}
+
 /** Shared toolbar refresh action (§8.4): spinner while loading, else a refresh icon. */
 @Composable
 fun RefreshButton() {
@@ -181,6 +255,7 @@ fun SlotRow(
     modifier: Modifier = Modifier,
 ) {
     val lineup = LocalLineupStore.current
+    val favorites = LocalFavoritesStore.current
     val nav = LocalNav.current
     val band = lineup.band(slot.bandId)
     val subtitle = if (showDay) Fmt.dayTime(slot.start) else Fmt.range(slot.start, slot.end)
@@ -207,7 +282,8 @@ fun SlotRow(
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
         }
-        FavoriteButton(slot.bandId)
+        // §7: Home rows show a static star; favoriting happens on band detail / line-up list.
+        StaticFavoriteStar(isFavorite = favorites.isFavorite(slot.bandId))
     }
 }
 

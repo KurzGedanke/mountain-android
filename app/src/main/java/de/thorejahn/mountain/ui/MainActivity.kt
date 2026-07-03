@@ -49,6 +49,7 @@ class MainActivity : ComponentActivity() {
                 CompositionLocalProvider(
                     LocalLineupStore provides container.lineup,
                     LocalFavoritesStore provides container.favorites,
+                    LocalAutographFavoritesStore provides container.autographFavorites,
                     LocalSettingsStore provides container.settings,
                     LocalReminderManager provides container.reminders,
                     LocalNav provides nav,

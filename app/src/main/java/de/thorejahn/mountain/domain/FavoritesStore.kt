@@ -30,6 +30,6 @@ class FavoritesStore(
         val updated = if (nowFavorite) ids + bandId else ids - bandId
         ids = updated // optimistic; the prefs collector will reconcile
         scope.launch { prefs.save(updated) }
-        if (nowFavorite) Telemetry.bandFavorited(bandId) else Telemetry.bandUnfavorited(bandId)
+        if (nowFavorite) Telemetry.bandFavorited(bandId) // §9: only positive-intent events
     }
 }

@@ -17,6 +17,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.HelpOutline
 import androidx.compose.material.icons.filled.Album
+import androidx.compose.material.icons.filled.Draw
 import androidx.compose.material.icons.filled.GraphicEq
 import androidx.compose.material.icons.filled.MusicNote
 import androidx.compose.material.icons.filled.PhotoCamera
@@ -54,6 +55,7 @@ import de.thorejahn.mountain.data.model.spotifyUrl
 import de.thorejahn.mountain.ui.LocalLineupStore
 import de.thorejahn.mountain.ui.LocalNav
 import de.thorejahn.mountain.ui.LocalOpenUrl
+import de.thorejahn.mountain.ui.common.AutographReminderButton
 import de.thorejahn.mountain.ui.common.FavoriteButton
 import de.thorejahn.mountain.ui.common.Fmt
 import de.thorejahn.mountain.ui.common.MicPlaceholder
@@ -160,6 +162,55 @@ fun BandDetailScreen(bandId: Int, modifier: Modifier = Modifier) {
                                 ),
                                 style = MaterialTheme.typography.titleMedium,
                             )
+                        }
+                    }
+                }
+            }
+
+            // 3b. Autographs (§6) — only when the band has sessions; styled like the set-times card.
+            val autographs = lineup.autographsForBand(bandId)
+            if (autographs.isNotEmpty()) {
+                Text(
+                    text = stringResource(R.string.autographs_header),
+                    style = MaterialTheme.typography.titleSmall,
+                    fontWeight = FontWeight.SemiBold,
+                )
+                Column(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .clip(RoundedCornerShape(12.dp))
+                        .background(MaterialTheme.colorScheme.surfaceVariant)
+                        .padding(12.dp),
+                    verticalArrangement = Arrangement.spacedBy(8.dp),
+                ) {
+                    autographs.forEach { session ->
+                        Row(
+                            verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.spacedBy(8.dp),
+                        ) {
+                            Icon(
+                                Icons.Filled.Draw,
+                                contentDescription = null,
+                                tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                            )
+                            Column(modifier = Modifier.weight(1f)) {
+                                Text(
+                                    text = stringResource(
+                                        R.string.dot_separator,
+                                        Fmt.dayTime(session.start),
+                                        session.signingPoint,
+                                    ),
+                                    style = MaterialTheme.typography.titleMedium,
+                                )
+                                session.location?.takeIf { it.isNotEmpty() }?.let {
+                                    Text(
+                                        text = it,
+                                        style = MaterialTheme.typography.bodySmall,
+                                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                    )
+                                }
+                            }
+                            AutographReminderButton(session.id)
                         }
                     }
                 }

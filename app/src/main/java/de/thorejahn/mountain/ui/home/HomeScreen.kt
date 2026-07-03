@@ -22,8 +22,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import de.thorejahn.mountain.R
 import de.thorejahn.mountain.domain.LineupStore
+import de.thorejahn.mountain.ui.LocalAutographFavoritesStore
 import de.thorejahn.mountain.ui.LocalFavoritesStore
 import de.thorejahn.mountain.ui.LocalLineupStore
+import de.thorejahn.mountain.ui.common.AutographHomeRow
 import de.thorejahn.mountain.ui.common.EmptyState
 import de.thorejahn.mountain.ui.common.RefreshButton
 import de.thorejahn.mountain.ui.common.SlotRow
@@ -35,6 +37,7 @@ import kotlinx.coroutines.launch
 fun HomeScreen(modifier: Modifier = Modifier) {
     val lineup = LocalLineupStore.current
     val favorites = LocalFavoritesStore.current
+    val autographFavorites = LocalAutographFavoritesStore.current
     val scope = rememberCoroutineScope()
     val now by rememberNow()
 
@@ -63,6 +66,7 @@ fun HomeScreen(modifier: Modifier = Modifier) {
 
             val playing = lineup.nowPlaying(now)
             val next = lineup.upNext(now)
+            val nextAutograph = lineup.nextFavoriteAutograph(autographFavorites.ids, now)
             val favoriteSlots = lineup.upcomingFavoriteSlots(favorites.ids, now)
 
             LazyColumn(
@@ -81,6 +85,12 @@ fun HomeScreen(modifier: Modifier = Modifier) {
                 if (next.isNotEmpty()) {
                     item { SectionHeader(stringResource(R.string.up_next)) }
                     items(next, key = { "next-${it.id}" }) { SlotRow(it, emphasized = false) }
+                }
+
+                // Your next autograph session — single soonest favorited session; hidden when none (§7)
+                if (nextAutograph != null) {
+                    item { SectionHeader(stringResource(R.string.next_autograph)) }
+                    item(key = "autograph-${nextAutograph.id}") { AutographHomeRow(nextAutograph) }
                 }
 
                 // Your bands

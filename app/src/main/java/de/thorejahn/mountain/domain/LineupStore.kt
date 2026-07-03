@@ -5,6 +5,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import de.thorejahn.mountain.data.local.SeedLoader
 import de.thorejahn.mountain.data.local.SnapshotCache
+import de.thorejahn.mountain.data.model.AutographSession
 import de.thorejahn.mountain.data.model.Band
 import de.thorejahn.mountain.data.model.LineupSnapshot
 import de.thorejahn.mountain.data.model.TimeSlot
@@ -34,12 +35,29 @@ class LineupStore(
 
     val bands: List<Band> get() = snapshot.bands.sortedBy { it.name.lowercase() }
     val slots: List<TimeSlot> get() = snapshot.slots // already sorted by start
+    val autographs: List<AutographSession> get() = snapshot.autographs // already sorted by start
     val updatedAt: Long? get() = snapshot.updatedAt
     val isEmpty: Boolean get() = slots.isEmpty() && bands.isEmpty()
 
     fun band(id: Int): Band? = snapshot.bands.firstOrNull { it.id == id }
 
     fun slotsForBand(id: Int): List<TimeSlot> = slots.filter { it.bandId == id }
+
+    /** All autograph sessions for a band, sorted by start (§6). */
+    fun autographsForBand(id: Int): List<AutographSession> =
+        autographs.filter { it.bandId == id }.sortedBy { it.start }
+
+    /**
+     * The single soonest upcoming favorited autograph session (§7): favorited AND not yet ended
+     * (missing end treated as start + 1h). null hides the Home section entirely.
+     */
+    fun nextFavoriteAutograph(
+        favoriteIds: Set<String>,
+        at: Instant = Instant.now(),
+    ): AutographSession? =
+        autographs
+            .filter { it.id in favoriteIds && !it.effectiveEnd.isBefore(at) }
+            .minByOrNull { it.start }
 
     /** Slots currently on stage: start <= at < effectiveEnd (§4.1). */
     fun nowPlaying(at: Instant = Instant.now()): List<TimeSlot> =

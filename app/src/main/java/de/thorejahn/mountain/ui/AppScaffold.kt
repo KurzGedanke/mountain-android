@@ -37,6 +37,7 @@ fun AppScaffold() {
     val nav = LocalNav.current
     val lineup = LocalLineupStore.current
     val favorites = LocalFavoritesStore.current
+    val autographFavorites = LocalAutographFavoritesStore.current
     val settings = LocalSettingsStore.current
     val reminders = LocalReminderManager.current
     val scope = rememberCoroutineScope()
@@ -45,25 +46,36 @@ fun AppScaffold() {
         ActivityResultContracts.RequestPermission()
     ) {
         reminders.refreshAuthorization()
-        scope.launch { reminders.sync(settings.remindersEnabled, favorites.ids, lineup.slots) }
+        scope.launch {
+            reminders.sync(
+                settings.remindersEnabled, favorites.ids, lineup.slots,
+                autographFavorites.ids, lineup.autographs,
+            )
+        }
     }
 
     // Startup: refresh (falls back to cache) then arm reminders (§5.1).
     LaunchedEffect(Unit) {
         lineup.refresh()
-        reminders.sync(settings.remindersEnabled, favorites.ids, lineup.slots)
+        reminders.sync(
+            settings.remindersEnabled, favorites.ids, lineup.slots,
+            autographFavorites.ids, lineup.autographs,
+        )
     }
 
-    // Reactive re-sync whenever reminders-enabled or favorites change (§5.2).
-    LaunchedEffect(settings.remindersEnabled, favorites.ids) {
+    // Reactive re-sync whenever reminders-enabled or favorites (band or autograph) change (§5.2).
+    LaunchedEffect(settings.remindersEnabled, favorites.ids, autographFavorites.ids) {
         val enabled = settings.remindersEnabled
         val favs = favorites.ids
-        val needsPermission = enabled && favs.isNotEmpty() && !reminders.authorized &&
+        val autographFavs = autographFavorites.ids
+        // Permission prompt triggers when the user has *either* band or autograph favorites (§5).
+        val hasFavorites = favs.isNotEmpty() || autographFavs.isNotEmpty()
+        val needsPermission = enabled && hasFavorites && !reminders.authorized &&
             Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU
         if (needsPermission) {
             permissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
         } else {
-            reminders.sync(enabled, favs, lineup.slots)
+            reminders.sync(enabled, favs, lineup.slots, autographFavs, lineup.autographs)
         }
     }
 

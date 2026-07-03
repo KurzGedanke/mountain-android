@@ -12,6 +12,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.core.content.ContextCompat
 import de.thorejahn.mountain.R
+import de.thorejahn.mountain.data.model.AutographSession
 import de.thorejahn.mountain.data.model.TimeSlot
 import de.thorejahn.mountain.data.prefs.ReminderPrefs
 import java.time.Instant
@@ -45,8 +46,18 @@ class ReminderManager(
         authorized = notificationsAllowed()
     }
 
-    /** Full rebuild (§4.3): cancel everything, then re-add future + favorited + enabled. */
-    suspend fun sync(enabled: Boolean, favorites: Set<Int>, slots: List<TimeSlot>) {
+    /**
+     * Full rebuild (§4.3, §5): cancel everything, then re-add every future favorited band set and
+     * autograph session while reminders are enabled. Autograph ids are prefixed so they can't
+     * collide with a band-set reminder that shares the same `{bandId}-{start}` value.
+     */
+    suspend fun sync(
+        enabled: Boolean,
+        favorites: Set<Int>,
+        slots: List<TimeSlot>,
+        autographFavorites: Set<String>,
+        autographs: List<AutographSession>,
+    ) {
         cancelAll()
         if (!enabled) return
         refreshAuthorization()
@@ -58,14 +69,25 @@ class ReminderManager(
 
         for (slot in slots) {
             if (slot.bandId !in favorites) continue
-            val fireSeconds = slot.start - lead
-            val fireInstant = Instant.ofEpochSecond(fireSeconds)
+            val fireInstant = Instant.ofEpochSecond(slot.start - lead)
             if (!fireInstant.isAfter(now)) continue // never schedule past reminders
 
             val time = timeFormatter.format(slot.startInstant)
             val body = appContext.getString(R.string.on_stage_at, time, slot.stage)
             schedule(slot.id, fireInstant.toEpochMilli(), slot.band, body)
             scheduled += slot.id
+        }
+
+        for (session in autographs) {
+            if (session.id !in autographFavorites) continue
+            val fireInstant = Instant.ofEpochSecond(session.start - lead)
+            if (!fireInstant.isAfter(now)) continue
+
+            val id = "$AUTOGRAPH_PREFIX${session.id}"
+            val time = timeFormatter.format(session.startInstant)
+            val body = appContext.getString(R.string.autograph_reminder_body, time, session.signingPoint)
+            schedule(id, fireInstant.toEpochMilli(), session.band, body)
+            scheduled += id
         }
         prefs.setScheduledIds(scheduled)
     }
@@ -120,5 +142,6 @@ class ReminderManager(
     companion object {
         const val LEAD_MINUTES = 15
         const val CHANNEL_ID = "reminders"
+        const val AUTOGRAPH_PREFIX = "autograph-"
     }
 }

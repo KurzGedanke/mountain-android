@@ -14,10 +14,12 @@ import okio.Path.Companion.toPath
 import de.thorejahn.mountain.analytics.Telemetry
 import de.thorejahn.mountain.data.local.SeedLoader
 import de.thorejahn.mountain.data.local.SnapshotCache
+import de.thorejahn.mountain.data.prefs.AutographFavoritesPrefs
 import de.thorejahn.mountain.data.prefs.FavoritesPrefs
 import de.thorejahn.mountain.data.prefs.ReminderPrefs
 import de.thorejahn.mountain.data.prefs.SettingsPrefs
 import de.thorejahn.mountain.data.remote.BaphometApi
+import de.thorejahn.mountain.domain.AutographFavoritesStore
 import de.thorejahn.mountain.domain.FavoritesStore
 import de.thorejahn.mountain.domain.LineupStore
 import de.thorejahn.mountain.domain.ReminderManager
@@ -32,7 +34,7 @@ class MountainApp : Application(), SingletonImageLoader.Factory {
 
     override fun onCreate() {
         super.onCreate()
-        Telemetry.init() // analytics before UI (§5.1)
+        Telemetry.init(this) // analytics before UI (§5.1)
         container = AppContainer(this)
         createReminderChannel()
     }
@@ -66,6 +68,7 @@ class AppContainer(context: Context) {
 
     val settingsPrefs = SettingsPrefs(context)
     val favoritesPrefs = FavoritesPrefs(context)
+    val autographFavoritesPrefs = AutographFavoritesPrefs(context)
     private val reminderPrefs = ReminderPrefs(context)
 
     val lineup = LineupStore(
@@ -74,6 +77,7 @@ class AppContainer(context: Context) {
         api = BaphometApi(),
     )
     val favorites = FavoritesStore(favoritesPrefs, scope)
+    val autographFavorites = AutographFavoritesStore(autographFavoritesPrefs, scope)
     val settings = SettingsStore(settingsPrefs, scope)
     val reminders = ReminderManager(context.applicationContext, reminderPrefs)
 }

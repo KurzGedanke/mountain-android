@@ -21,7 +21,11 @@ class BootReceiver : BroadcastReceiver() {
             try {
                 val enabled = container.settingsPrefs.remindersEnabled.first()
                 val favorites = container.favoritesPrefs.ids.first()
-                container.reminders.sync(enabled, favorites, container.lineup.slots)
+                val autographFavorites = container.autographFavoritesPrefs.ids.first()
+                container.reminders.sync(
+                    enabled, favorites, container.lineup.slots,
+                    autographFavorites, container.lineup.autographs,
+                )
             } finally {
                 pending.finish()
             }

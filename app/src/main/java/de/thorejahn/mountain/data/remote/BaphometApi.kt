@@ -1,8 +1,10 @@
 package de.thorejahn.mountain.data.remote
 
+import de.thorejahn.mountain.data.model.AutographSession
 import de.thorejahn.mountain.data.model.Band
 import de.thorejahn.mountain.data.model.LineupSnapshot
 import de.thorejahn.mountain.data.model.TimeSlot
+import de.thorejahn.mountain.data.remote.dto.ApiAutographSession
 import de.thorejahn.mountain.data.remote.dto.ApiStage
 import de.thorejahn.mountain.data.remote.dto.ApiTimeSlot
 import kotlinx.coroutines.Dispatchers
@@ -66,9 +68,32 @@ class BaphometApi(
         }
     }
 
-    /** §3.4 — parallel bands fetch, sequential stage/timeslot loop, slots sorted ascending by start. */
+    /**
+     * §3 — single `/autographs` call returns every session for the festival with band + signing
+     * point embedded. Ordered by start; we re-sort defensively. `/autographs/upnext` is NOT used.
+     */
+    private suspend fun fetchAutographs(): List<AutographSession> {
+        val raw = AppJson.decodeFromString(
+            ListSerializer(ApiAutographSession.serializer()),
+            getString("/api/festivals/$FESTIVAL_SLUG/autographs"),
+        )
+        return raw.map {
+            AutographSession(
+                bandId = it.bandId,
+                band = it.band,
+                bandSlug = it.bandSlug,
+                signingPoint = it.signingPoint,
+                location = it.location,
+                start = it.startTime.timestamp,
+                end = it.endTime?.timestamp,
+            )
+        }.sortedBy { it.start }
+    }
+
+    /** §3.4 — parallel bands + autographs fetch, sequential stage/timeslot loop, all sorted by start. */
     suspend fun fetchSnapshot(): LineupSnapshot = coroutineScope {
         val bandsDeferred = async { fetchBands() }
+        val autographsDeferred = async { fetchAutographs() }
         val stages = fetchStages()
         val slots = stages.flatMap { fetchTimeslots(it.slug) }.sortedBy { it.start }
         LineupSnapshot(
@@ -76,6 +101,7 @@ class BaphometApi(
             stages = stages.map { it.name },
             bands = bandsDeferred.await(),
             slots = slots,
+            autographs = autographsDeferred.await(),
             updatedAt = Instant.now().epochSecond,
         )
     }

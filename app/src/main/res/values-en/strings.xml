@@ -14,7 +14,15 @@
     <string name="appearance_system">System</string>
     <string name="favorites_only">Favorites only</string>
     <string name="find_me_online">Find me online</string>
-    <string name="reminders_footer">Get a reminder 15 minutes before a favorited band plays.</string>
+    <string name="reminders_footer">Get a reminder 15 minutes before a favorited band plays or an autograph session starts.</string>
+
+    <!-- Autographs (§8) -->
+    <string name="autographs_header">Autographs</string>
+    <string name="next_autograph">Your next autograph session</string>
+    <string name="autograph_reminder_body">Signing at %1$s · %2$s</string>
+    <string name="remind_add">Remind me</string>
+    <string name="remind_remove">Remove reminder</string>
+    <string name="favorited">Favorited</string>
     <string name="bio_1">Hey, I\'m Thore! A podcaster and software developer from the Ruhr area. I\'ve loved Dong Open Air for many years, and this app is basically my little love letter to the festival.</string>
     <string name="bio_2">I\'m also a huge Magic: The Gathering fan. If we bump into each other at Dong, let\'s play a round. And if you enjoy the app, I\'d be happy if you grabbed me a beer.</string>
     <string name="lineup_title">Line-up</string>

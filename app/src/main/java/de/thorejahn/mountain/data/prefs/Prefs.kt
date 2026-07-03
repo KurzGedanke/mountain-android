@@ -13,6 +13,7 @@ private val Context.dataStore by preferencesDataStore(name = "mountain_prefs")
 
 private object Keys {
     val FAVORITE_BAND_IDS = stringSetPreferencesKey("favoriteBandIDs")
+    val FAVORITE_AUTOGRAPH_IDS = stringSetPreferencesKey("favoriteAutographIDs")
     val APPEARANCE = stringPreferencesKey("appearance")
     val REMINDERS_ENABLED = booleanPreferencesKey("remindersEnabled")
     val SCHEDULED_REMINDER_IDS = stringSetPreferencesKey("scheduledReminderIDs")
@@ -53,6 +54,19 @@ class FavoritesPrefs(private val context: Context) {
 
     suspend fun save(ids: Set<Int>) {
         context.dataStore.edit { it[Keys.FAVORITE_BAND_IDS] = ids.map(Int::toString).toSet() }
+    }
+}
+
+/**
+ * Favorited autograph-session ids (§4). Stored under a *separate* key from band favorites so
+ * refreshing the schedule never disturbs them. Ids are the stable session id `{bandId}-{start}`.
+ */
+class AutographFavoritesPrefs(private val context: Context) {
+    val ids: Flow<Set<String>> =
+        context.dataStore.data.map { it[Keys.FAVORITE_AUTOGRAPH_IDS] ?: emptySet() }
+
+    suspend fun save(ids: Set<String>) {
+        context.dataStore.edit { it[Keys.FAVORITE_AUTOGRAPH_IDS] = ids }
     }
 }
 

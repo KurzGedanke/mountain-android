@@ -6,6 +6,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.runtime.snapshots.SnapshotStateList
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.runtime.toMutableStateList
+import de.thorejahn.mountain.domain.AutographFavoritesStore
 import de.thorejahn.mountain.domain.FavoritesStore
 import de.thorejahn.mountain.domain.LineupStore
 import de.thorejahn.mountain.domain.ReminderManager
@@ -50,6 +51,7 @@ class NavController {
 
 val LocalLineupStore = staticCompositionLocalOf<LineupStore> { error("LineupStore not provided") }
 val LocalFavoritesStore = staticCompositionLocalOf<FavoritesStore> { error("FavoritesStore not provided") }
+val LocalAutographFavoritesStore = staticCompositionLocalOf<AutographFavoritesStore> { error("AutographFavoritesStore not provided") }
 val LocalSettingsStore = staticCompositionLocalOf<SettingsStore> { error("SettingsStore not provided") }
 val LocalReminderManager = staticCompositionLocalOf<ReminderManager> { error("ReminderManager not provided") }
 val LocalNav = staticCompositionLocalOf<NavController> { error("NavController not provided") }

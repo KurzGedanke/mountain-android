@@ -17,7 +17,15 @@
     <string name="appearance_system">System</string>
     <string name="favorites_only">Nur Favoriten</string>
     <string name="find_me_online">Online findest du mich</string>
-    <string name="reminders_footer">Erhalte 15 Minuten vorher eine Erinnerung, bevor eine favorisierte Band spielt.</string>
+    <string name="reminders_footer">Erhalte 15 Minuten vorher eine Erinnerung, bevor eine favorisierte Band spielt oder eine Autogrammstunde beginnt.</string>
+
+    <!-- Autographs (§8) -->
+    <string name="autographs_header">Autogramme</string>
+    <string name="next_autograph">Deine nächste Autogrammstunde</string>
+    <string name="autograph_reminder_body">Signierstunde um %1$s · %2$s</string>
+    <string name="remind_add">Erinnern</string>
+    <string name="remind_remove">Erinnerung entfernen</string>
+    <string name="favorited">Favorisiert</string>
     <string name="bio_1">Moin, ich bin Thore! Podcaster und Softwareentwickler aus dem Ruhrgebiet. Das Dong Open Air liebe ich schon seit vielen Jahren, und diese App ist quasi mein kleiner Liebesbrief an das Festival.</string>
     <string name="bio_2">Außerdem bin ich ein riesiger Magic: The Gathering Fan. Wenn wir uns auf dem Dong über den Weg laufen, lass uns gerne eine Runde spielen. Und wenn dir die App gefällt, freue ich mich riesig über ein Bier.</string>
     <string name="lineup_title">Programm</string>
